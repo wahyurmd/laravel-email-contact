@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use Mail;
+use Alert;
 
 class ContactController extends Controller {
 
@@ -43,8 +44,8 @@ class ContactController extends Controller {
             // $message->priority(3);
             // $message->attach('pathToFile');
         });
-
-        return back()->with( 'success', 'Thank you for contacting us. We will reply as soon as possible' );
+        Alert::success('Thank You', 'We will reply as soon as possible');
+        return back();
     }
 
 }

@@ -9,6 +9,8 @@
 </head>
 <body>
 
+    @include('sweetalert::alert')
+
     <div class="container">
         <div class="row mt-5 mb-5">
             <div class="col-8 offset-2 mt-5">
